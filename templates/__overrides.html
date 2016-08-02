@@ -6,6 +6,14 @@
 <meta name="author" content="University of Oregon, Knight Library">
 {% endblock head_page_meta %}
 
+{% block head_page_title %}
+  {% if page_title %}
+    {{page_title}} « Historic Oregon Newspapers
+  {% else %}
+    Historic Oregon Newspapers
+  {% endif %}
+{% endblock head_page_title %}
+
 {% block navbar %}
 <nav class="navbar navbar-inverse header_navbar">
   <div class="container">
