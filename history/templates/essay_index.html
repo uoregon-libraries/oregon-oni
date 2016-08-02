@@ -1,0 +1,92 @@
+{% extends '__l_main.html' %}
+
+{% block subcontent %}
+ <div id="std_box">
+
+<p>Historical essays are being written for newspaper titles in Historic Oregon Newspapers.</p>
+
+<ul>
+    <li><a href="{% url 'oregon_history_essay' 'staterightsdemocrat' %}">Albany, <em>The State Rights Democrat</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'ashlandtidings' %}">Ashland, <em>Ashland Tidings</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'astorian' %}">Astoria, <em>The Daily Astorian</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'toveritar' %}">Astoria, <em>Toveritar</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'athenapress' %}">Athena, <em>The Athena Press</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'auroraborealis' %}">Aurora, <em>Aurora Borealis</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'bandonrecorder' %}">Bandon,<em> Recorder</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'beavertonowltimes' %}">Beaverton, <em>The Owl/Beaverton Times</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'bendbulletin' %}">Bend, <em>The Bend Bulletin</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'burnstimes' %}">Burns, <em>Burns Times-Herald</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'grantcountynews' %}">Canyon City, <em>Grant County News</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'chemawaamerican' %}">Chemawa, <em>Chemawa American</em> Essay</a></li>    
+<li><a href="{% url 'oregon_history_essay' 'coastmail' %}">Coos Bay (Marshfield), <em>Coast Mail</em> and <em>Coos Bay Times</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'bentondemocrat' %}">Corvallis, <em>The Benton Democrat</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'corvallisdailygazettetimes' %}">Corvallis, <em>The Daily Gazette-Times</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'corvallisgazette' %}">Corvallis, <em>The Corvallis Gazette</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'corvallistimes' %}">Corvallis, <em>Corvallis Times/The Gazette-Times</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'oregonunion' %}">Corvallis, <em>The Oregon Union</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'uniongazette' %}">Corvallis, <em>Oregon Union/The Union Gazette/Corvallis Gazette</em> Essay</a></li>    
+<li><a href="{% url 'oregon_history_essay' 'bohemianugget' %}">Cottage Grove, <em>Bohemia Nugget</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'oregonrepublican' %}">Dallas, <em>Oregon Republican/Liberal Republican</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'echoregister' %}">Echo, <em>The Echo Register</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'enterprisenewsrecord' %}">Enterprise, <em>News Record</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'eugenebroadaxebroadaxetribune' %}">Eugene, <em>Broad-Axe Tribune</em> and <em>Broad-Axe</em> Essay</a></li>
+     <li><a href="{% url 'oregon_history_essay' 'eugenestaterepublican' %}">Eugene, <em>State Republican</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'smokesignals' %}">Grand Ronde, <em>Smoke Signals</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'roguerivercourier' %}">Grants Pass, <em>Rogue River Courier</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'heppnergazette' %}">Heppner, <em>Weekly Gazette/Heppner Gazette/Gazette-Times</em> Essay</a></li>
+     <li><a href="{% url 'oregon_history_essay' 'heppnerherald' %}">Heppner, <em>Heppner Herald</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'hillsboroargus' %}">Hillsboro, <em>The Argus/The Hillsboro Argus</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'hoodriverglacier' %}">Hood River, <em>The Hood River Glacier</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'hoodriversun' %}">Hood River, <em>Hood River Sun</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'houltoncolumbiaregister' %}">Houlton, <em>Columbia Register</em> Essay</a></li>    
+<li><a href="{% url 'oregon_history_essay' 'oregonsentinel' %}">Jacksonvile, <em>Oregon Sentinel</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'wallowachieftain' %}">Joseph, <em>Wallowa Chieftain</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'kfallsherald' %}">Klamath Falls, <em>The Evening Herald</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'junctioncitybulletin' %}">Junction City, <em>Junction City Bulletin</em> Essay</a></li> 
+    <!--<li><a href="{% url 'oregon_history_essay' 'lagrandeobserver' %}">La Grande, <em>Observor</em> Essay</a></li> -->
+<li><a href="{% url 'oregon_history_essay' 'lagrandeeveningobserver' %}">La Grande, <em>Evening Observer</em> Essay</a></li>    
+<li><a href="{% url 'oregon_history_essay' 'lakecountyexaminer' %}">Lakeview, <em>Lake County</em> <em>Examiner</em> Essay</a></li>     
+     <li><a href="{% url 'oregon_history_essay' 'madraspioneer' %}">Madras, <em>Pioneer</em> Essay</a></li>     
+    <li><a href="{% url 'oregon_history_essay' 'medfordmail' %}">Medford, <em>Mail Tribune</em> Essay</a></li> 
+<li><a href="{% url 'oregon_history_essay' 'polkcountyobserver' %}">Monmouth/Dallas, <em>Polk County Observer</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'ontarioargus' %}">Ontario, <em>Ontario Argus</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'oregoncityclackamascountyrecord' %}">Oregon City, <em>Clackamas County Record</em> Essay</a></li> 
+<li><a href="{% url 'oregon_history_essay' 'oregoncityoregonargus' %}">Oregon City, <em>Oregon Argus</em> Essay</a></li>
+ <li><a href="{% url 'oregon_history_essay' 'oregoncitycourier' %}">Oregon City, <em>Oregon City Courier</em> Essay</a></li>
+<li><a href="{% url 'oregon_history_essay' 'oregoncityenterprise' %}">Oregon City, <em>Oregon City Enterprise</em> Essay</a></li>    
+<li><a href="{% url 'oregon_history_essay' 'oregoncitypress' %}">Oregon City, <em>Oregon City Press</em> Essay</a></li>    
+<li><a href="{% url 'oregon_history_essay' 'oregonfreepress' %}">Oregon City, <em>Oregon Free Press</em> Essay</a></li> 
+    <li><a href="{% url 'oregon_history_essay' 'spectator' %}">Oregon City, <em>Oregon Spectator</em> Essay</a></li>    
+    <li><a href="{% url 'oregon_history_essay' 'eastoregonian' %}">Pendleton, <em>Pendleton East Oregonian</em> Essay</a></li>    
+    <li><a href="{% url 'oregon_history_essay' 'newage' %}">Portland, <em>New Age</em> Essay</a></li> 
+    <li><a href="{% url 'oregon_history_essay' 'newnw' %}">Portland, <em>New Northwest</em> Essay</a></li> 
+    <li><a href="{% url 'oregon_history_essay' 'oregonian' %}">Portland, <em>Oregonian</em> Essay</a></li> 
+    <li><a href="{% url 'oregon_history_essay' 'stjohnsreview' %}">Portland, <em>St. Johns Review</em> Essay</a></li>
+     <li><a href="{% url 'oregon_history_essay' 'portlandwestshoreillustratedwestshore' %}">Portland, <em>West Shore</em> and <em>Illustrated West Shore</em> Essay</a></li> 
+    <li><a href="{% url 'oregon_history_essay' 'crookcountyjournal' %}">Prineville, <em>Crook County Journal</em> Essay</a></li>
+     <li><a href="{% url 'oregon_history_essay' 'eaglevalleynews' %}">Richland, <em>Eagle Valley News</em> Essay</a></li> 
+    <li><a href="{% url 'oregon_history_essay' 'douglasindependent' %}">Roseburg, <em>The Douglas Independent</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'plaindealer' %}">Roseburg, <em>Plaindealer</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'roseburgreview' %}">Roseburg, <em>Roseburg Review</em> Essay</a></li>
+     <li><a href="{% url 'oregon_history_essay' 'sthelenscolumbian' %}">St. Helens, <em>Columbian</em> Essay</a></li> 
+    <li><a href="{% url 'oregon_history_essay' 'mist' %}">St. Helens, <em>St. Helens Mist</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'capitaljournal' %}">Salem, <em>Capital Journal</em> Essay</a></li> 
+    <li><a href="{% url 'oregon_history_essay' 'willfarmer' %}">Salem, <em>Willamette Farmer</em> Essay</a></li> 
+    <li><a href="{% url 'oregon_history_essay' 'umpquagazette' %}">Scottsburg, <em>Umpqua Weekly Gazette</em> Essay</a></li> 
+    <li><a href="{% url 'oregon_history_essay' 'spraycourier' %}">Spray, <em>Spray Courier</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'springfieldnews' %}">Springfield, <em>Springfield News</em> and <em>Lane County News</em> Essay</a></li> 
+    <li><a href="{% url 'oregon_history_essay' 'sumpterminer' %}">Sumpter, <em>Sumpter Miner</em> Essay</a></li> 
+    <li><a href="{% url 'oregon_history_essay' 'dalleschronicle' %}">The Dalles, <em>The Dalles Daily Chronicle</em> Essay</a></li> 
+    <li><a href="{% url 'oregon_history_essay' 'timesmountaineer' %}">The Dalles, <em>The Dalles Times-Mountaineer</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'tillamookherald' %}">Tillamook, <em>Herald</em> Essay</a></li> 
+    <li><a href="{% url 'oregon_history_essay' 'lincolncountyleader' %}">Toledo, <em>Lincoln County Leader</em> Essay</a></li>
+    <li><a href="{% url 'oregon_history_essay' 'oregonscout' %}">Union, <em>Oregon Scout</em> Essay</a></li> 
+    <li><a href="{% url 'oregon_history_essay' 'malheurenterprise' %}">Vale, <em>Malheur Enterprise</em> Essay</a></li> 
+ </ul>
+<p>Turnbull's <em>History of Oregon Newspapers</em> was a valuable source for much of the information. Although considered a major historical resource, it is not without errors. Please contact us if you have additional information on a title or know of any corrections to be made.</p>
+<p>Versions of these essays for titles that are part of the National Digital Newspaper Program are available at <a href="http://chroniclingamerica.loc.gov">Chronicling America</a>. The versions on Historic Oregon Newspapers may be longer versions of those essays and formatted for University of Oregon style guidelines.</p>
+
+<p></p>
+</div><!-- end id:std_box -->
+
+{% endblock %}

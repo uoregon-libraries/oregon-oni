@@ -1,0 +1,36 @@
+{% extends "__base.html" %}
+
+{% block head_page_meta %}
+{{ block.super }}
+<meta name="description" content="Historic Oregon News">
+<meta name="author" content="University of Oregon, Knight Library">
+{% endblock head_page_meta %}
+
+{% block navbar %}
+<nav class="navbar navbar-inverse header_navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="{% url 'openoni_home' %}">Home</a></li>
+        <li><a href="{% url 'openoni_newspapers' %}">Newspapers</a></li>
+        <li><a href="{% url 'oregon_history' %}">History</a></li>
+        <li><a href="{% url 'openoni_issues' %}">Browse by Date</a></li>
+        <li><a href="{% url 'openoni_help' %}">Help</a></li>
+      </ul>
+
+      {% block navbar_advancedsearch %}{{ block.super }}{% endblock navbar_advancedsearch %}
+      {% block navbar_search %}{{ block.super }}{% endblock navbar_search %}
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+{% endblock navbar %}
