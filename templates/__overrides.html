@@ -30,8 +30,12 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="{% url 'openoni_home' %}">Home</a></li>
-        <li><a href="{% url 'openoni_newspapers' %}">Newspapers</a></li>
-        <li><a href="{% url 'openoni_help' %}">Help</a></li>
+        <li><a href="{% url 'openoni_newspapers' %}">Titles</a></li>
+        <li><a href="{% url 'openoni_search_advanced' %}">Search</a></li>
+        <li><a href="https://odnp.uoregon.edu/k-12-resources/">K-12 Resources</a></li>
+        <li><a href="https://odnp.uoregon.edu/current-newspapers/">Current Newspapers</a></li>
+        <li><a href="https://odnp.uoregon.edu/">ODNP Blog</a></li>
+        <li><a href="{% url 'openoni_about' %}">About</a></li>
       </ul>
 
       {% block navbar_advancedsearch %}{{ block.super }}{% endblock navbar_advancedsearch %}
