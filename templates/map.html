@@ -1,0 +1,54 @@
+
+{% extends '__l_main.html' %}
+
+{% load static from staticfiles %}
+
+{# comment out block tabs and "pages available" #}
+{% block sharetool_container_left %}{% endblock %}
+
+{% block head_page_css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'vendor/leaflet/leaflet.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/map.css' %}"/>
+{% endblock head_page_css %}
+
+{% block subcontent %}
+
+  {% block map %}
+    <h3>Map</h3>
+
+    <!-- provide the map with a div to live inside -->
+    <div id="map_container"></div>
+  {% endblock map %}
+
+  
+
+{% endblock subcontent %}
+
+
+{% block javascript %}
+  {{ block.super }}
+  <!-- leafvar (map library) -->
+  <script src="{% static 'vendor/leaflet/leaflet.js' %}"></script>
+
+  <!-- include a stamenizer for the map appearance -->
+  <script src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+
+  <!-- data for the cities -->
+  <script src="{% static 'js/cities_list.js' %}"></script>
+
+  {% block javascript_map_settings %}
+    <script>
+      // map settings
+      var stamenType = "toner";
+      var startLat = 44.07179;
+      var startLong = -120.83889;
+      var startZoom = 7;
+      var markerColor = "#000000";
+    </script>
+  {% endblock javascript_map_settings %}
+  
+  <!-- The map JS -->
+  <script src="{% static 'js/map.js' %}"></script>
+{% endblock javascript %}
+
