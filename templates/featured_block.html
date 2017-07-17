@@ -1,0 +1,26 @@
+{% load static from staticfiles %}
+{% load humanize %}
+{% load image_urls %}
+{% block this_day %}
+  {% if this_day_title %}
+    <h3>This day in history:</h3>
+  {% else %}
+     <h3>Featured page:</h3>
+  {% endif %}
+   <div class="col-md-8">
+      {% block featured_pages %}
+        <ul class="featured_content">
+          {% for page in pages %}
+            <li>
+              <a href="{% url 'openoni_page' page.lccn page.date page.edition page.sequence %}">
+                <img src="{% thumb_image_url page.page_obj %}"/>
+              </a>
+              <p class="featured_title">{{ page.name }}</p>
+              <p class="featured_date">{{ page.date }}</p>
+              <p class="featured_caption">{{ page.caption }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endblock featured_pages %}
+   </div>
+{% endblock this_day %}
