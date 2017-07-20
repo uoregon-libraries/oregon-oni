@@ -1,0 +1,17 @@
+.locations.row h3 {
+  color: #FFF;
+  background: #000;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+  .locations.row > div:nth-child(2n+3) {
+    clear: left;
+  }
+}
+@media (min-width: 992px) {
+  .locations.row > div:nth-child(3n+4) {
+    clear: left;
+  }  
+}
