@@ -1,0 +1,26 @@
+{% extends "__l_main.html" %}
+
+{% load static from staticfiles %}
+
+{% block head_extra %}
+<link href="{% static 'css/or-locations.css' %}" rel="stylesheet" media="screen">
+{% endblock head_extra %}
+
+{% block main_content %}
+
+<div id="std_box">
+  <div class="locations row">
+    {% for location in locs %}
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <h3>{{ location }}</h3>
+        <ul class="titles">
+          {% for title in locations|lookup:location %}
+            <li><a href="{% url 'openoni_title' title.lccn %}">{{title.display_name}}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock main_content %}

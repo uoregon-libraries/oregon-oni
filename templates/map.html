@@ -1,10 +1,6 @@
-
 {% extends '__l_main.html' %}
 
 {% load static from staticfiles %}
-
-{# comment out block tabs and "pages available" #}
-{% block sharetool_container_left %}{% endblock %}
 
 {% block head_page_css %}
   {{ block.super }}
@@ -13,6 +9,9 @@
 {% endblock head_page_css %}
 
 {% block subcontent %}
+  <div>
+    <h3>View the complete list of <a href="{% url 'oregon_titles_by_location' %}">titles by location</a></h3>
+  </div>
 
   {% block map %}
     <h3>Map</h3>
@@ -20,11 +19,7 @@
     <!-- provide the map with a div to live inside -->
     <div id="map_container"></div>
   {% endblock map %}
-
-  
-
 {% endblock subcontent %}
-
 
 {% block javascript %}
   {{ block.super }}
@@ -51,4 +46,3 @@
   <!-- The map JS -->
   <script src="{% static 'js/map.js' %}"></script>
 {% endblock javascript %}
-
