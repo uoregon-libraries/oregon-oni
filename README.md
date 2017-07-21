@@ -7,14 +7,6 @@ This repository holds the theme and other customizations for http://oregonnews.u
 Usage
 ---
 
-Put this into `themes/oregon`.
-
-Hook up the apps in `onisite/settings_local.py` as such:
-
-    INSTALLED_APPS = (
-      'django.contrib.humanize',
-      'django.contrib.staticfiles',
-      'themes.oregon',
-      'themes.default',
-      'core',
-    )
+Don't use this directly!  Grab the [ONI Wrapper](https://github.com/uoregon-libraries/oni-wrapper)
+repository and use its bash scripts (or reverse-engineer them if you can't run
+bash scripts) to set up the theme and necessary plugins.
