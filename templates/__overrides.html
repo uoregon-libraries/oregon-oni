@@ -34,6 +34,14 @@
     <a href="https://library.uoregon.edu/" rel="home" id="uolib-logo">
       <img src="{% static 'images/libraries.svg' %}" alt="University of Oregon Libraries" />
     </a>
+    <div class="pull-right navburger">
+      <button class="navbar-toggle hamburger collapsed" data-toggle="collapse" data-target="#odnp-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
   </div>
 </div>
 
@@ -47,16 +55,7 @@
 
 <nav class="navbar navbar-inverse header_navbar">
   <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="odnp-navbar">
       <ul class="nav navbar-nav">
         <li><a href="{% url 'openoni_home' %}">Home</a></li>
         <li><a href="{% url 'openoni_newspapers' %}">Titles</a></li>

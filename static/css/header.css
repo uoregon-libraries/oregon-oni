@@ -58,4 +58,18 @@
   #main-header a h1 {
     font-size: 18px;
   }
+  #uolib-logo img {
+    height: 30px;
+    padding-top: 5px;
+  }
+}
+
+/* Hamburger menu since it can't live in the nav like bootstrap prefers */
+.navburger .icon-bar {
+  border: 1px solid yellow;
+}
+@media only screen and (min-width: 769px) {
+  .navburger {
+    display: none;
+  }
 }
