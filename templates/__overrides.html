@@ -5,6 +5,13 @@
   {{ block.super }}
   <link href="{% static 'css/header.css' %}" rel="stylesheet" media="screen">
   <link href="{% static 'css/dropdown-nav.css' %}" rel="stylesheet" media="screen">
+
+  {# inline styles so django can properly set up the static URL #}
+  <style>
+    #main-header {
+      background-image: url({% static 'images/odnp.jpg' %});
+    }
+  </style>
 {% endblock head_page_css %}
 
 {% block head_page_meta %}
@@ -31,6 +38,11 @@
 </div>
 
 <div id="main-header">
+  <div class="container">
+    <a class="site-title" href="{% url 'openoni_home' %}">
+      <h1 class="title">{{ site_title }}</h1>
+    </a>
+  </div>
 </div>
 
 <nav class="navbar navbar-inverse header_navbar">
