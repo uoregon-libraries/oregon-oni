@@ -18,7 +18,44 @@
 }
 #main-header a h1 {
   color: #006600;
-  font-size: 60px;
   text-align: center;
   text-shadow: 0px 0px 16px #fff, 0px 0px 8px #fff;
+}
+
+@media only screen and (min-width: 1201px) {
+  #main-header a h1 {
+    font-size: 60px;
+  }
+}
+@media only screen and (min-width: 950px) and (max-width: 1200px) {
+  #main-header {
+    height: 80px;
+  }
+  #main-header a h1 {
+    font-size: 48px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 950px) {
+  #main-header {
+    height: 64px;
+  }
+  #main-header a h1 {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  #main-header {
+    height: 64px;
+  }
+  #main-header a h1 {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 400px) {
+  #main-header {
+    height: 50px;
+  }
+  #main-header a h1 {
+    font-size: 18px;
+  }
 }
