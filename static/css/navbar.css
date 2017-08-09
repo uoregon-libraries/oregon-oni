@@ -1,0 +1,61 @@
+/* Navigation area is complex enough that we stuff it into its own CSS file */
+.navbar-collapse {
+  padding: 0px;
+}
+#navbar, .dropdown-menu {
+  background-color: #00704A;
+}
+#navbar li > a, #navbar button.dropdown-toggle {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: white;
+  font-size: 1.5em;
+}
+#navbar li.active, #navbar li > a:focus, #navbar li > a:hover,
+#navbar button.dropdown-toggle:hover, #navbar button.dropdown-toggle:focus {
+  background-color: #124734;
+}
+#navbar li > a:focus, #navbar li > a:hover,
+#navbar button.dropdown-toggle:hover, #navbar button.dropdown-toggle:focus {
+  text-decoration: underline;
+}
+
+/* The dropdown button(s) should appear like the links */
+#navbar button.dropdown-toggle {
+  background-color: transparent;
+  box-sizing: border-box;
+  display: block;
+  line-height: 20px;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  padding: 14px;
+  position: relative;
+  text-decoration: none;
+  border: none;
+  top: 1px;
+}
+
+#search-bar {
+  background-color: #124734;
+  display: block;
+  clear: both;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+#search-bar .inline {
+  display: inline-block;
+}
+#search-bar label {
+  padding-right: 16px;
+}
+#search-bar a {
+  color: white;
+  text-decoration: underline;
+}
+#search-bar button {
+  background-color: #00704A;
+  color: white;
+  font-weight: bold;
+  border: 0px;
+}
