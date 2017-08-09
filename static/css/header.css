@@ -1,3 +1,4 @@
+/* UO Libraries logo bar */
 #uo-topbar {
   background-color: #124734;
   position: relative;
@@ -13,6 +14,7 @@
   height: 36px;
 }
 
+/* Header for actual site */
 #main-header {
   height: 108px;
   border-bottom: 1px solid black;
@@ -67,7 +69,7 @@
 
 /* Hamburger menu since it can't live in the nav like bootstrap prefers */
 .navburger .icon-bar {
-  border: 1px solid yellow;
+  border-top: 3px solid yellow;
 }
 @media only screen and (min-width: 769px) {
   .navburger {
