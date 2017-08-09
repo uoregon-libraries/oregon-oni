@@ -28,6 +28,13 @@
   {% endif %}
 {% endblock head_page_title %}
 
+{% block body_content %}
+  <div id="skip-link">
+    <a href="#skip_menu" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+  {{block.super}}
+{% endblock body_content %}
+
 {% block header %}
 <div id="uo-topbar">
   <div class="container">
