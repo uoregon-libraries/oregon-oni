@@ -35,18 +35,22 @@
   top: 1px;
 }
 
-nav .search {
+#search-bar {
+  background-color: #124734;
   display: block;
   clear: both;
   width: 100%;
   text-align: center;
+  color: white;
 }
-
-nav .search .inline {
+#search-bar .inline {
   display: inline-block;
 }
+#search-bar label {
+  padding-right: 16px;
+}
 
-nav .search a {
-  color: #7f7fff;
+#search-bar a {
+  color: white;
   text-decoration: underline;
 }
