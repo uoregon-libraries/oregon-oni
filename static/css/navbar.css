@@ -49,8 +49,13 @@
 #search-bar label {
   padding-right: 16px;
 }
-
 #search-bar a {
   color: white;
   text-decoration: underline;
+}
+#search-bar button {
+  background-color: #00704A;
+  color: white;
+  font-weight: bold;
+  border: 0px;
 }
