@@ -14,10 +14,6 @@
 #navbar button.dropdown-toggle:hover, #navbar button.dropdown-toggle:focus {
   background-color: #124734;
 }
-#navbar li > a:focus, #navbar li > a:hover,
-#navbar button.dropdown-toggle:hover, #navbar button.dropdown-toggle:focus {
-  text-decoration: underline;
-}
 
 /* The dropdown button(s) should appear like the links */
 #navbar button.dropdown-toggle {
