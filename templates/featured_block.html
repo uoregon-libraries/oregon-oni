@@ -10,19 +10,21 @@
   {% endif %}
 
   {% block featured_pages %}
-    <ul class="featured_content">
-      {% for page in pages %}
-        <li>
-          <a href="{% url 'openoni_page' page.lccn page.date page.edition page.sequence %}">
-            <img class="tiny-page" src="{% tiny_image_url page.page_obj %}" alt="" />
-            <img class="thumb-page" src="{% thumb_image_url page.page_obj %}" alt="" />
-            <img class="medium-page" src="{% medium_image_url page.page_obj %}" alt="" />
-            <p class="featured_title">{{ page.name }}</p>
-            <p class="featured_date">{{ page.date }}</p>
-            <p class="featured_caption">{{ page.caption }}</p>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
+    {% for page in pages %}
+      <div>
+        <a href="{% url 'openoni_page' page.lccn page.date page.edition page.sequence %}">
+
+          <picture>
+            <source media="(max-width: 300px)" srcset="{% tiny_image_url page.page_obj %}">
+            <source media="(max-width: 1150px)" srcset="{% thumb_image_url page.page_obj %}">
+            <img src="{% medium_image_url page.page_obj %}" alt="" />
+          </picture>
+
+          <p class="featured_title">{{ page.name }}</p>
+          <p class="featured_date">{{ page.date }}</p>
+          <p class="featured_caption">{{ page.caption }}</p>
+        </a>
+      </div>
+    {% endfor %}
   {% endblock featured_pages %}
 {% endblock this_day %}
