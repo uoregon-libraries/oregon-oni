@@ -1,0 +1,81 @@
+{% load static from staticfiles %}
+
+<div id="uo-topbar">
+  <div class="container">
+    <a href="https://library.uoregon.edu/" rel="home" id="uolib-logo">
+      <img src="{% static 'images/libraries.svg' %}" alt="University of Oregon Libraries" />
+    </a>
+    <div class="pull-right navburger">
+      <button class="navbar-toggle hamburger collapsed" data-toggle="collapse" data-target="#odnp-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="main-header">
+  <div class="container">
+    <a class="site-title" href="{% url 'openoni_home' %}">
+      <h1 class="title">{{ site_title }}</h1>
+    </a>
+  </div>
+</div>
+
+<div class="collapse navbar-collapse" id="odnp-navbar">
+  <div id="navbar">
+    <nav>
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li><a href="{% url 'openoni_home' %}">Home</a></li>
+          <li><a href="{% url 'openoni_newspapers' %}">Titles</a></li>
+          <li><a href="{% url 'map_home' %}">Map</a></li>
+          <li><a href="{% url 'oregon_titles_by_location' %}">Locations</a></li>
+          <li><a href="{% url 'openoni_issues' %}">Calendar</a></li>
+          <li class="expanded dropdown">
+            <button data-target="#" class="dropdown-toggle nolink" data-toggle="dropdown">
+              About <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="first leaf"><a href="{% url 'static_pages_subpage' 'history' 'essays_or' %}">Historical Essays</a></li>
+              <li class="leaf"><a href="https://odnp.uoregon.edu/">ODNP Blog</a></li>
+              <li class="leaf"><a href="https://odnp.uoregon.edu/k-12-resources/">K-12 Resources</a></li>
+              <li class="leaf"><a href="https://odnp.uoregon.edu/current-newspapers/">Current Newspapers</a></li>
+              <li class="leaf"><a href="{% url 'static_pages_page' 'faq' %}">FAQ</a></li>
+              <li class="leaf"><a href="{% url 'static_pages_page' 'acknow' %}">Acknowledgements</a></li>
+              <li class="leaf"><a href="{% url 'openoni_help' %}">Help</a></li>
+              <li class="leaf"><a href="mailto:Lib-odnp@lists.uoregon.edu">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div id="search-bar">
+    <div class="container">
+      <div class="search">
+        <div class="inline">
+          <form class="navbar-form" role="search" action="{% url 'openoni_search_pages_results' %}" method="get">
+            <div class="form-group">
+              <input type="hidden" name="rows" id="rows" alt="rows" value="20" />
+              <input type="hidden" name="searchType" alt="searchType" value="basic" />
+              <label for="proxtext">Search Newspaper Pages</label>
+              <input class="form-control" type="text" name="proxtext" id="proxtext" />
+            </div><!-- /form-group -->
+
+            <button type="submit" class="btn btn-default">
+              <span class="search_text">Go</span>
+            </button>
+          </form>
+        </div>
+
+        <div class="inline">
+          <a href="{% url 'openoni_search_advanced' %}">Advanced Search</a>
+        </div>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</div>
