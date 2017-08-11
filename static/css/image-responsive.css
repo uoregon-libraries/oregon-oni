@@ -1,0 +1,20 @@
+/* Hide all these images by default, only to show them with very precise media queries */
+img.tiny-page, img.thumb-page, img.medium-page {
+  display: none;
+}
+
+@media only screen and (max-width: 400px) {
+  img.tiny-page {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 800px) {
+  img.thumb-page {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 801px) {
+  img.medium-page {
+    display: inline;
+  }
+}
