@@ -2,7 +2,7 @@
 .navbar-collapse {
   padding: 0px;
 }
-#navbar, .dropdown-menu {
+#navbar, #navbar .dropdown-menu {
   background-color: #00704A;
 }
 #navbar li > a, #navbar button.dropdown-toggle {

@@ -44,10 +44,11 @@
   height: 108px;
   border-bottom: 1px solid black;
 }
-#main-header a h1 {
+#main-header a, #main-header a:focus, #main-header a:hover {
   color: #006600;
   text-align: center;
   text-shadow: 0px 0px 16px #fff, 0px 0px 8px #fff;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 1201px) {
