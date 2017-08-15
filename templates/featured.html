@@ -1,5 +1,5 @@
 {% extends "__l_main.html" %}
- 
+
 {% block subcontent %}
 <div class="row">
   <div class="col-md-8">
@@ -7,10 +7,38 @@
     <p>
       Welcome to Historic Oregon Newspapers. On this site you can search and
       access complete content for historic Oregon newspapers that have been
-      digitized as part of the Oregon Digital Newspaper Program (ODNP). ODNP is
-      committed to providing free online access to historic Oregon newspapers.
-      This is made possible with the <a href="{% url 'static_pages_page' 'acknow' %}">support</a>
-      of federal and state grants, the UO Libraries, and through private donations.
+      digitized as part of the Oregon Digital Newspaper Program (ODNP). This
+      full-text searchable database contains over 800,000 pages from Oregon
+      newspapers dated 1846-2017, and we are continually adding new titles.
+    </p>
+
+    <ul>
+      <li>
+        To see all titles on this site, check out the
+        <a href="{% url 'openoni_newspapers' %}">Titles</a> page.
+      </li>
+
+      <li>
+        You can also browse titles by city in the
+        <a href="{% url 'map_home' %}">Map</a> and
+        <a href="{% url 'oregon_titles_by_location' %}">Locations</a> sections.
+      </li>
+
+      <li>
+        To search the text of the newspapers, use the search box or
+        <a href="{% url 'openoni_search_advanced' %}">Advanced Search</a> option.
+      </li>
+
+      <li>
+        For more help on using the site, visit our <a href="{% url 'openoni_help' %}">Help</a> section.
+      </li>
+    </ul>
+
+    <hr />
+    <p>
+      ODNP is committed to providing free online access to historic Oregon
+      newspapers. This is made possible with the support of federal and state
+      grants, the UO Libraries, and through private donations.
 
       <a href="http://library.uoregon.edu/digitalscholarship/digital-collections/contribute">Become a partner or contribute</a>.
     </p>
