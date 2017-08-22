@@ -126,7 +126,7 @@ var cities = [
     "papers": {
       "The Columbian.": "sn93051654", 
       "The Columbia register.": "sn97071109", 
-      "St. Helens mist.": "2004260419"
+      "St. Helens mist.": "2004260419",
       "The Oregon mist.": "2004260421"
     }
   }, 
