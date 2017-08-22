@@ -18,7 +18,7 @@
 * ======================================================================== */
   
  
-jQuery(document).ready(function() {
+$(window).on("load", function() {
  (function($) { 
   "use strict"; 
 
