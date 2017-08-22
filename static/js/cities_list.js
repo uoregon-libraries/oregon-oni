@@ -6,7 +6,7 @@ var cities = [
     ], 
     "name": "Albany", 
     "papers": {
-      "The State rights democrat.": "sn84022644", 
+      "The state rights democrat.": "sn84022644", 
       "The Albany register.": "sn84022643"
     }
   }, 
@@ -96,6 +96,19 @@ var cities = [
   }, 
   {
     "latlong": [
+      42.19458, 
+      -122.70948
+    ], 
+    "name": "Ashland", 
+    "papers": {
+      "Ashland daily tidings.": "sn96088003", 
+      "Ashland tidings.": "sn85042399", 
+      "Rogue news.": "2013260024", 
+      "Ashland weekly tidings.": "sn96088004"
+    }
+  }, 
+  {
+    "latlong": [
       45.18234, 
       -122.80787
     ], 
@@ -114,6 +127,7 @@ var cities = [
       "The Columbian.": "sn93051654", 
       "The Columbia register.": "sn97071109", 
       "St. Helens mist.": "2004260419"
+      "The Oregon mist.": "2004260421"
     }
   }, 
   {
@@ -167,8 +181,8 @@ var cities = [
     "papers": {
       "The Benton democrat. volume": "sn84022649", 
       "The Corvallis times.": "sn2002060538", 
-      "The Gazette-times.": "sn96088340", 
-      "The Union gazette.": "sn93051659", 
+      "The gazette-times.": "sn96088340", 
+      "Union gazette.": "sn93051659", 
       "The Oregon union.": "sn96088334", 
       "The Corvallis gazette.": "sn84022650", 
       "Corvallis daily gazette. volume": "2014260100", 
@@ -293,9 +307,9 @@ var cities = [
     "papers": {
       "Toveritar.": "2011260133", 
       "Tri-weekly Astorian.": "sn96061148", 
-      "The Daily Astorian.": "sn96061149", 
-      "The daily morning Astorian.": "sn96061150", 
       "The daily Astorian.": "sn83008376", 
+      "The daily morning Astorian.": "sn96061150", 
+      "The Daily Astorian.": "sn96061149", 
       "The morning Astorian.": "sn85042400"
     }
   }, 
@@ -349,7 +363,7 @@ var cities = [
     ], 
     "name": "Medford", 
     "papers": {
-      "Medford mail tribune.": "97071090"
+      "Medford mail tribune.": "sn97071090"
     }
   }, 
   {
@@ -433,7 +447,7 @@ var cities = [
       "Heppner weekly gazette.": "sn97071041", 
       "Heppner herald.": "sn97071037", 
       "Heppner gazette-times.": "sn97071042", 
-      "The Gazette-times.": "sn97071038", 
+      "The gazette-times.": "sn97071038", 
       "Heppner gazette.": "sn94049698", 
       "The Weekly Heppner gazette.": "sn94049697", 
       "Heppner times.": "sn97071040"
@@ -552,22 +566,9 @@ var cities = [
     "name": "Enterprise", 
     "papers": {
       "Enterprise news-record.": "sn96088044", 
-      "The News=record.": "sn96088043", 
+      "The news=record.": "sn96088043", 
       "Wallowa chieftain.": "sn94052752", 
       "Wallowa County chieftain.": "sn90057139"
-    }
-  }, 
-  {
-    "latlong": [
-      42.19458, 
-      -122.70948
-    ], 
-    "name": "Ashland", 
-    "papers": {
-      "Ashland daily tidings.": "sn96088003", 
-      "Ashland tidings.": "sn85042399", 
-      "Rogue news.": "2013260024", 
-      "Ashland weekly tidings.": "sn96088004"
     }
   }, 
   {
@@ -657,7 +658,7 @@ var cities = [
       "West side enterprise.": "sn96088099", 
       "Independence monitor.": "2012260081", 
       "The Polk County post.": "2012260080", 
-      "Independence enterprise.": "sn96088097"
+      "Independence enterprise.": "sn96088094"
     }
   }, 
   {
@@ -709,16 +710,15 @@ var cities = [
     "name": "Salem", 
     "papers": {
       "Willamette farmer.": "sn85042522", 
-      "Capital press. [West]": "2007260205", 
+      "Capital press.": "2007260204", 
       "The Chemawa American [microform].": "2003238611", 
-      "Capital journal.": "sn90066132", 
+      "Capital journal.": "sn99063954", 
       "Keizertimes.": "sn00063621", 
       "The Oregon Argus.": "sn83025129", 
       "Evening capital journal.": "sn99063952", 
       "Weekly Chemawa American.": "ca15001324", 
       "Daily capital journal.": "sn99063955", 
-      "The Daily journal.": "sn99063956", 
-      "Capital press. [East]": "2007260204"
+      "The Daily journal.": "sn99063956"
     }
   }, 
   {
@@ -741,7 +741,7 @@ var cities = [
       "Morning enterprise.": "sn00063701", 
       "Oregon City courier=herald.": "sn00063697", 
       "The enterprise.": "sn94052322", 
-      "Oregon City enterprise.": "sn94052321", 
+      "Oregon City enterprise.": "sn00063700", 
       "The banner-courier.": "sn00063699", 
       "Oregon free press.": "sn84022661", 
       "Oregon City courier.": "sn00063694", 
