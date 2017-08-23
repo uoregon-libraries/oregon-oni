@@ -60,11 +60,11 @@ def titles_by_location(request):
     locs = sorted(locations, key=str.lower)
     return render(request, "or-locations.html", locals())
 
-def _round_to_2(x):
-    return round(x, -int(floor(log10(abs(x))-1)))
+def _round_to_100k(x):
+    return round(x, -5)
 
 def _approx(x):
-    rounded = int(_round_to_2(x))
+    rounded = int(_round_to_100k(x))
     if rounded > x:
         return "almost", rounded
     if rounded < x:
