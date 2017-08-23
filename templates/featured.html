@@ -1,5 +1,7 @@
 {% extends "__l_main.html" %}
 
+{% load humanize %}
+
 {% block subcontent %}
 <div class="row">
   <div class="col-md-8">
@@ -8,8 +10,10 @@
       Welcome to Historic Oregon Newspapers. On this site you can search and
       access complete content for historic Oregon newspapers that have been
       digitized as part of the Oregon Digital Newspaper Program (ODNP). This
-      full-text searchable database contains over 800,000 pages from Oregon
-      newspapers dated 1846-2017, and we are continually adding new titles.
+      full-text searchable database contains {{approx_page_adjective}}
+      {{approx_pages|intcomma}} pages from Oregon newspapers dated
+      {{earliest_year}} - {{latest_year}}, and we are continually adding new
+      titles.
     </p>
 
     <ul>
