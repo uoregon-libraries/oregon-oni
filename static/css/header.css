@@ -102,3 +102,8 @@
     display: none;
   }
 }
+
+/* Give a little space after newspaper nav */
+#newspaper_nav {
+  margin-bottom: 16px;
+}
