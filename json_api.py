@@ -3,6 +3,7 @@ from rfc3339 import rfc3339
 from core import models
 from core.utils import strftime
 from django.conf import settings
+from django.core import urlresolvers
 from django.core.paginator import Paginator
 
 def batches(page_number):
