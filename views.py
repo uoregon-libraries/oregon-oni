@@ -49,4 +49,4 @@ def home(request):
     approx_page_adjective, approx_pages = _approx(page_count)
     earliest_year, latest_year = _fulltext_range()
 
-    return render(request, 'featured.html', locals())
+    return render(request, 'home.html', locals())
