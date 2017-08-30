@@ -20,9 +20,9 @@
             <img src="{% custom_image_url page.page_obj 330 %}" alt="" />
           </picture>
 
-          <p class="featured_title">{{ page.name }}</p>
-          <p class="featured_date">{{ page.date }}</p>
-          <p class="featured_caption">{{ page.caption }}</p>
+          <div class="featured title">{{ page.name }}</div>
+          <div class="featured date">{{ page.date }}</div>
+          <div class="featured caption">{{ page.caption }}</div>
         </a>
       </div>
     {% endfor %}
