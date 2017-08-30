@@ -37,3 +37,8 @@
   top: -12px;
   text-align: right;
 }
+
+.social-icons img {
+  width:40px;
+  height:40px;
+}
