@@ -1,5 +1,5 @@
 /* Skip link */
-#skip-link a {
+a.skiplink {
   padding: 6px;
   font-weight: normal;
   position: absolute;
@@ -14,7 +14,7 @@
   transition: top 1s ease-out, background 1s linear;
   z-index: 100;
 }
-#skip-link a:focus {
+a.skiplink:focus {
   position:absolute;
   font-weight: normal;
   left:0px;
