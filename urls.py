@@ -1,7 +1,7 @@
 from django.conf.urls import url, include
 from onisite.plugins.title_locations import views as tl_views
-import views
-import api
+from . import views
+from . import api
 
 urlpatterns = [
     # JSON reimplementations
