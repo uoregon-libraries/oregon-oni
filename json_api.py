@@ -3,7 +3,7 @@ from rfc3339 import rfc3339
 from core import models
 from core.utils import strftime
 from django.conf import settings
-from django.core import urlresolvers
+from django import urls
 from django.core.paginator import Paginator
 
 def batches(page_number):
@@ -14,11 +14,11 @@ def batches(page_number):
     j = {'batches': batch_data}
 
     if page.has_next():
-        url_next = urlresolvers.reverse('oregon_batches_json_page', args=[page.next_page_number()])
+        url_next = urls.reverse('oregon_batches_json_page', args=[page.next_page_number()])
         j['next'] = settings.BASE_URL + url_next
 
     if page.has_previous():
-        url_prev = urlresolvers.reverse('oregon_batches_json_page', args=[page.previous_page_number()])
+        url_prev = urls.reverse('oregon_batches_json_page', args=[page.previous_page_number()])
         j['previous'] = settings.BASE_URL + url_prev
 
     return j
