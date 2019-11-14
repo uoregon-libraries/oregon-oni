@@ -1,4 +1,19 @@
+/* Better link contrast */
 a {
   color: #004784;
   font-weight: bold;
+}
+
+/* Accessible focus indicators */
+a {
+  outline: none;
+}
+.focusable:focus {
+  box-shadow: 0 0 2px 3px #78aeda, 0 0 2px #78aeda inset; border-radius: 2px;
+}
+*:focus > .focusable {
+  box-shadow: 0 0 2px 3px #78aeda, 0 0 2px #78aeda inset; border-radius: 2px;
+}
+button:focus,input:focus,select:focus {
+  box-shadow: 0 0 2px 3px #78aeda, 0 0 2px #78aeda inset; border-radius: 2px;
 }

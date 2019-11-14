@@ -28,8 +28,13 @@ def _fulltext_range():
     fulltext_range = cache.get('fulltext_range')
     if not fulltext_range:
         # get the maximum and minimum years that we have content for
-        issue_dates = models.Issue.objects.all().aggregate(min_date=Min('date_issued'),
-        max_date=Max('date_issued'))
+        issue_dates = models.Issue.objects.all().aggregate(
+            min_date=Min('date_issued'),
+            max_date=Max('date_issued')
+        )
+
+        if issue_dates['min_date'] is None or issue_dates['max_date'] is None:
+            return (1600, 1800)
 
         min_year = issue_dates['min_date'].year
         max_year = issue_dates['max_date'].year

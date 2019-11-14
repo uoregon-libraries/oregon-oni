@@ -14,7 +14,7 @@ from core import models
 from core.decorator import cache_page, cors
 from core.utils.utils import _page_range_short, _rdf_base, _get_tip
 
-import json_api
+from . import json_api
 
 def _render(j):
     return HttpResponse(json.dumps(j, indent=2), content_type='application/json')
