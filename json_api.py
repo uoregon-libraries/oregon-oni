@@ -1,7 +1,6 @@
 from rfc3339 import rfc3339
 
 from core import models
-from core.utils import strftime
 from django.conf import settings
 from django import urls
 from django.core.paginator import Paginator
@@ -42,7 +41,7 @@ def batch(batch, include_issues=True):
                     "name": issue.title.display_name,
                     "url": settings.BASE_URL + issue.title.json_url,
                 },
-                "date_issued": strftime(issue.date_issued, "%Y-%m-%d"),
+                "date_issued": issue.date_issued.strftime("%Y-%m-%d"),
                 "url": settings.BASE_URL + issue.json_url
             }
             b['issues'].append(i)
@@ -62,7 +61,7 @@ def title(title):
         "place": [p.name for p in title.places.all()],
         "issues": [{
             "url": settings.BASE_URL + i.json_url,
-            "date_issued": strftime(i.date_issued, "%Y-%m-%d")
+            "date_issued": i.date_issued.strftime("%Y-%m-%d")
         } for i in title.issues.all()]
     }
 
@@ -71,7 +70,7 @@ def title(title):
 def issue(issue):
     j = {
         'url': 'http://' + settings.BASE_URL + issue.json_url,
-        'date_issued': strftime(issue.date_issued, "%Y-%m-%d"),
+        'date_issued': issue.date_issued.strftime("%Y-%m-%d"),
         'volume': issue.volume,
         'number': issue.number,
         'edition': issue.edition,
