@@ -1,4 +1,6 @@
 from math import log10, floor
+import datetime
+import random
 
 from django.core.cache import cache
 from django.shortcuts import render
@@ -9,8 +11,6 @@ from django.template.defaulttags import register
 from django.db.models import Min, Max
 
 from core import models
-
-from onisite.plugins.featured_content import helpers as featured_content_helpers
 
 def _round_to_100k(x):
     return round(x, -5)
@@ -44,12 +44,43 @@ def _fulltext_range():
 
     return fulltext_range
 
+def featured_page():
+    # Seed the RNG with today's date so we always feature the same page(s) for
+    # an entire day
+    random.seed(datetime.date.today().strftime("%Y%m%d"))
+
+    min_year, _ = _fulltext_range()
+    now = datetime.date.today()
+    page = None
+    title = "This day in history"
+
+    qs = models.Page.objects
+    qs = qs.filter(jp2_filename__isnull = False)
+    qs = qs.filter(sequence = 1)
+
+    tries = 0
+    while page is None and tries < 10:
+        tries += 1
+        year = random.randrange(min_year, 1951)
+        subquery = qs.filter(issue__date_issued = datetime.datetime(year, now.month, now.day))
+        num = subquery.count()
+        if num > 0:
+            page = subquery[random.randrange(num)]
+
+    if page is None:
+        qs = qs.order_by('?')
+        if qs.count() > 0:
+            page = qs.order_by('?')[0]
+            title = "Featured Page"
+
+    return page, title
+
 # Calls the featured page plugin handler to get in order to inject some useful
 # dynamic values
 def home(request):
     """Grab featured content from the plugin, then set up some of the
     high-level data like approximate page count"""
-    pages, this_day_title = featured_content_helpers.get_pages()
+    page, featured_page_title = featured_page()
     page_count = models.Page.objects.count()
     approx_page_adjective, approx_pages = _approx(page_count)
     earliest_year, latest_year = _fulltext_range()

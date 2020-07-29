@@ -2,29 +2,22 @@
 {% load oregon_image_urls %}
 
 {% block this_day %}
-  {% if this_day_title %}
-    <h2>This day in history</h2>
-  {% else %}
-     <h2>Featured page</h2>
+  {% if page %}
+  <h2>{{ featured_page_title }}</h2>
+
+  <div>
+    <a href="{% url 'openoni_page' page.issue.title.lccn page.issue.date_issued page.issue.edition page.sequence %}">
+
+      <picture>
+        <source media="(max-width: 300px)" srcset="{% custom_image_url page 120 %}">
+        <source media="(max-width: 800px)" srcset="{% custom_image_url page 200 %}">
+        <source media="(max-width: 1150px)" srcset="{% custom_image_url page 240 %}">
+        <img src="{% custom_image_url page 330 %}" alt="" />
+      </picture>
+
+      <div class="featured title">{{ page.issue.title.name }}</div>
+      <div class="featured date">{{ page.issue.date_issued }}</div>
+    </a>
+  </div>
   {% endif %}
-
-  {% block featured_pages %}
-    {% for page in pages %}
-      <div>
-        <a href="{% url 'openoni_page' page.lccn page.date page.edition page.sequence %}">
-
-          <picture>
-            <source media="(max-width: 300px)" srcset="{% custom_image_url page.page_obj 120 %}">
-            <source media="(max-width: 800px)" srcset="{% custom_image_url page.page_obj 200 %}">
-            <source media="(max-width: 1150px)" srcset="{% custom_image_url page.page_obj 240 %}">
-            <img src="{% custom_image_url page.page_obj 330 %}" alt="" />
-          </picture>
-
-          <div class="featured title">{{ page.name }}</div>
-          <div class="featured date">{{ page.date }}</div>
-          <div class="featured caption">{{ page.caption }}</div>
-        </a>
-      </div>
-    {% endfor %}
-  {% endblock featured_pages %}
 {% endblock this_day %}
