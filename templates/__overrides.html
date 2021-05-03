@@ -30,6 +30,24 @@
     ga('create', 'UA-20248889-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <!-- OWA tag -->
+  <script src='https://lib-analytics.uoregon.edu/modules/base/js/owa.tracker-combined-min.js'
+          type='text/javascript'></script>
+
+  <script type="text/javascript">
+    //<![CDATA[
+    try {
+      OWA.setSetting('baseUrl',  "https://lib-analytics.uoregon.edu/");
+      OWATracker = new OWA.tracker();
+      OWATracker.setSiteId('f6078c68e61255b702328e1ed9257326');
+      OWATracker.trackPageView();
+      OWATracker.trackClicks();
+      OWATracker.trackDomStream();
+    } catch(err) {}
+    //]]>
+  </script>
+
 {% endblock javascript %}
 
 {% block head_page_meta %}
