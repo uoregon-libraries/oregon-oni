@@ -62,7 +62,14 @@ def featured_page():
     while page is None and tries < 10:
         tries += 1
         year = random.randrange(min_year, 1951)
-        subquery = qs.filter(issue__date_issued = datetime.datetime(year, now.month, now.day))
+        month = now.month
+        day = now.day
+
+        # Dumb hack to prevent Python from crashing
+        if month == 2 and day == 29:
+            day = 28
+
+        subquery = qs.filter(issue__date_issued = datetime.datetime(year, month, day))
         num = subquery.count()
         if num > 0:
             page = subquery[random.randrange(num)]
